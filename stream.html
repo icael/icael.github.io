@@ -100,8 +100,8 @@ function stream(form) {
 	streamName = form.streamname.value || Math.floor(Math.random()*100)+'';
 	var phone = window.phone = PHONE({
 	    number        : streamName, // listen on username line else random
-	    publish_key   : 'pub-c-561a7378-fa06-4c50-a331-5c0056d0163c', // Your Pub Key
-	    subscribe_key : 'sub-c-17b7db8a-3915-11e4-9868-02ee2ddab7fe', // Your Sub Key
+	    publish_key   : 'pub-c-733b6d1b-6926-4485-9fd8-e645a92fec10', // Your Pub Key
+	    subscribe_key : 'sub-c-4e7b5364-4150-11e6-9236-02ee2ddab7fe', // Your Sub Key
 	    oneway        : true,
 	    broadcast     : true
 	});
@@ -132,8 +132,8 @@ function watch(form){
 	var num = form.number.value;
 	var phone = window.phone = PHONE({
 	    number        : "Viewer" + Math.floor(Math.random()*100), // listen on username line else random
-	    publish_key   : 'pub-c-561a7378-fa06-4c50-a331-5c0056d0163c', // Your Pub Key
-	    subscribe_key : 'sub-c-17b7db8a-3915-11e4-9868-02ee2ddab7fe', // Your Sub Key
+	    publish_key   : 'pub-c-733b6d1b-6926-4485-9fd8-e645a92fec10', // Your Pub Key
+	    subscribe_key : 'sub-c-4e7b5364-4150-11e6-9236-02ee2ddab7fe', // Your Sub Key
 	    oneway        : true
 	});
 	var ctrl = window.ctrl = CONTROLLER(phone);
@@ -176,7 +176,7 @@ function end(){
 
 function genEmbed(w,h){
 	if (!streamName) return;
-	var url = "http://kevingleason.me/SimpleRTC/embed.html?stream=" + streamName;
+	var url = "http://icael.github.io/embed.html?stream=" + streamName;
 	var embed    = document.createElement('iframe');
 	embed.src    = url;
 	embed.width  = w;
